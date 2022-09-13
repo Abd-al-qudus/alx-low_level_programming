@@ -1,13 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 /**
- * main - main block
- * Description: prints all single digit numbers of base 10
- * starting from 0, followed by a new line.
- * Return: 0
+ * main - Entry point
+ * Description: Print base 16 numbers
+ * Return: Always 0 (success)
  */
 int main(void)
 {
+	char c;
 	char d = '0';
 
 	while (d <= '9')
@@ -15,15 +15,10 @@ int main(void)
 		putchar(d);
 		d++;
 	}
-
-	char c = 'a';
-
-	while (c <= 'f')
+	for (c = 'a'; c <= 'f'; c++)
 	{
 		putchar(c);
-		c++;
 	}
-
 	putchar('\n');
 	return (0);
 }
