@@ -1,36 +1,51 @@
 #include "search_algos.h"
 #include <math.h>
 
+/* remember compiling math.h with gcc requires `-lm` */
+
+size_t min(size_t a, size_t b);
+
 /**
- * jump_search - uses jump search technique to search for
- * value in an array
- * @array: array to traverse
- * @size: length of the array
- * @value: value to search for
+ * min - returns the minimum of two size_t values
+ * @a: first value
+ * @b: second value
+ *
+ * Return: `a` if lower or equal to `b`, `b` otherwise
+ */
+size_t min(size_t a, size_t b)
+{
+	return (a <= b ? a : b);
+}
+
+/**
+ * jump_search - searches for a value in a sorted array of integers using
+ * jump search algorithm
+ * @array: pointer to the array to search
+ * @size: size of the array
+ * @value: value to search
  * Return: -1 on failure and index on success
  */
+
 int jump_search(int *array, size_t size, int value)
 {
-	size_t i, step, high, low;
+	size_t low, high, jump;
 
-	if (array == NULL)
+	if (!array || size == 0)
 		return (-1);
-	step = sqrt(size);
-	low = 0, high = size - 1;
-	for (i = 0; i < step; i++)
+	jump = sqrt(size);
+	for (high = 0; high < size && array[high] < value;
+	     low = high, high += jump)
 	{
-		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
-		if (value < array[step])
-			high = step - 1;
-		else
-			low = step + 1;
+		printf("Value checked array[%lu] = [%d]\n",
+		       high, array[high]);
 	}
-	printf("Value found between indexes [%ld] and [%ld]\n", low, high);
-	for (i = low; i <= high; i++)
+	printf("Value found between indexes [%lu] and [%lu]\n", low, high);
+
+	for (; low <= min(high, size - 1); low++)
 	{
-		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
-		if (array[i] == value)
-			return (i);
+		printf("Value checked array[%lu] = [%d]\n", low, array[low]);
+		if (array[low] == value)
+			return (low);
 	}
 	return (-1);
 }
