@@ -2,8 +2,8 @@
 
 /**
  * main - calls other function
- * This script prints and that piece of art is useful" - Dora Korpar, 2015-10-19,
- * followed by a new line
+ * This script prints and that piece of art is useful"
+ * Dora Korpar, 2015-10-19, followed by a new line
  * Author-EngineerPhoenix
  * Return: 1
  */
