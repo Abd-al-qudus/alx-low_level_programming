@@ -1,28 +1,20 @@
 #include <stdio.h>
+
 /**
- * main - main block
- * Description:  prints the alphabet in lowercase,
- * and then in uppercase, followed by a new line.
- * Return: 0
+ * main - call other function
+ * This code prints body small and capital letters
+ * followed by a new line
+ * Author-EngineerPhoenix
+ * Return: 0 always success
  */
 int main(void)
 {
-	char c = 'a';
+	int c;
 
-	while (c <= 'z')
-	{
+	for (c = 97; c <= 122; c++)
 		putchar(c);
-		c++;
-	}
-
-	c = 'A';
-
-	while (c <= 'Z')
-	{
+	for (c = 65; c <= 90; c++)
 		putchar(c);
-		c++;
-	}
-
 	putchar('\n');
 	return (0);
 }

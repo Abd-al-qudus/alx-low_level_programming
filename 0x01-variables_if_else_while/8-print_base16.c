@@ -1,24 +1,19 @@
 #include <stdio.h>
-#include <unistd.h>
+
 /**
- * main - Entry point
- * Description: Print base 16 numbers
- * Return: Always 0 (success)
+ * main - call other functions
+ * This code prints all numbers in base 16
+ * Author-EngineerPhoenix
+ * Return: 0 always success
  */
 int main(void)
 {
-	char c;
-	char d = '0';
+	int c;
 
-	while (d <= '9')
-	{
-		putchar(d);
-		d++;
-	}
-	for (c = 'a'; c <= 'f'; c++)
-	{
+	for (c = 0; c < 10; c++)
+		putchar('0' + c);
+	for (c = 97; c <= 102; c++)
 		putchar(c);
-	}
 	putchar('\n');
 	return (0);
 }
