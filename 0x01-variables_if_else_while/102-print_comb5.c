@@ -18,25 +18,25 @@ int main(void)
 			{
 				for (d = 0; d < 10; d++)
 				{
-					if (b < d && a <= c)
+				if (a + b < c + d && b < d && a <= c)
+				{
+					if (a + b + c + d <= 35)
 					{
-						if (a + b + c + d <= 35)
-						{
-							putchar('0' + a);
-							putchar('0' + b);
-							putchar(' ');
-							putchar('0' + c);
-							putchar('0' + d);
-							if (c + d + a + b < 35)
-							{
-								putchar(',');
-								putchar(' ');
-							}
-						}
+					putchar('0' + a);
+					putchar('0' + b);
+					putchar(' ');
+					putchar('0' + c);
+					putchar('0' + d);
+					if (c + d + a + b < 35)
+					{
+						putchar(',');
+						putchar(' ');
 					}
 				}
 			}
 		}
+		}
+	}
 	}
 	putchar('\n');
 	return (0);
