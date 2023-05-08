@@ -18,7 +18,7 @@ int main(void)
 			{
 				for (d = 0; d < 10; d++)
 				{
-				if (a + b < c + d && b < d && a <= c)
+				if (a + b < c + d && b <= d && a <= c)
 				{
 					if (a + b + c + d <= 35)
 					{
