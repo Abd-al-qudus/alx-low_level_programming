@@ -1,23 +1,28 @@
 #include <stdio.h>
+
 /**
- * main - main block
- * Description: Print the sum of even Fibonacci numbers up to a fib value
- * not exceeding 4,000,000.
- * Return: 0
+ * main - entry point
+ * This code prints the sum of fibonacci number that does
+ * not exceed 4000000
+ * Author-EngineerPhoenix
+ * Return: 0 success
  */
 int main(void)
 {
-	int i = 1, j = 2, total = 0;
-	int k;
+	long int a, j, b, num, next;
 
-	while (j < 4000000)
+	a = 1;
+	b = 2;
+	num = 2;
+	for (j = 2; ; j++)
 	{
-		if (j % 2 == 0)
-			total += j;
-		k = j;
-		j += i;
-		i = k;
+		next = a + b;
+		if (next > 4000000)
+			break;
+		(next % 2 == 0) ? num += next : num;
+		a = b;
+		b = next;
 	}
-	printf("%d\n", total);
+	printf("%lu\n", num);
 	return (0);
 }

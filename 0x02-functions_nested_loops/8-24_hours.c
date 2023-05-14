@@ -1,27 +1,34 @@
 #include "main.h"
 
 /**
- * jack_bauer - prints time
- *
- * Description: prints a list of time
- * Return: Always 0.
+ * jack_bauer - print the time of the day
+ * Author-EngineerPhoenix
+ * Return: void
  */
-
 void jack_bauer(void)
 {
-	int i, j;
+	int hour, min;
 
-	for (i = 0; i < 24; i++)
+	hour = 0, min = 0;
+	while (hour < 24)
 	{
-		for (j = 0; j < 60; j++)
+		int fhour, lhour, fmin, lmin;
+
+		fhour = hour / 10;
+		lhour = hour % 10;
+		min = 0;
+		while (min < 60)
 		{
-			_putchar(i / 10 + 48);
-			_putchar(i % 10 + 48);
+			fmin = min / 10;
+			lmin = min % 10;
+			_putchar('0' + fhour);
+			_putchar('0' + lhour);
 			_putchar(':');
-			_putchar(j / 10 + 48);
-			_putchar(j % 10 + 48);
+			_putchar('0' + fmin);
+			_putchar('0' + lmin);
 			_putchar('\n');
+			min++;
 		}
+		hour++;
 	}
 }
-
