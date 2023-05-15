@@ -2,8 +2,7 @@
 
 /**
  * main - Debugging.
- * test the positive_or_negative function
- * Author-EngineerPhoenix
+ *
  * Return: 0
  */
 
