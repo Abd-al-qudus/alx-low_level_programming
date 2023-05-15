@@ -1,20 +1,18 @@
 #include "main.h"
 
-#include <limits.h>
-
 /**
- * main - check the code
+ * main - check the code.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    int r;
-
-    print_last_digit(INT_MIN);
-    print_last_digit(0);
-    r = print_last_digit(-1024);
-    _putchar('0' + r);
+    print_times_table(3);
     _putchar('\n');
+    print_times_table(5);
+    _putchar('\n');
+    print_times_table(98);
+    _putchar('\n');
+    print_times_table(0);  
     return (0);
 }
