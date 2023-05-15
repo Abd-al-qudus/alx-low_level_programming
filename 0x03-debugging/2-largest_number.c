@@ -5,6 +5,7 @@
  * @a: first integer
  * @b: second integer
  * @c: third integer
+ * Author-EngineerPhoenix
  * Return: largest number
  */
 
